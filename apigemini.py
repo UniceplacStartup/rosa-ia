@@ -36,9 +36,10 @@ def mensagem():
     return str(resposta)
 
 # Testando a rota
-@app.route('/teste', methods=['POST'])
-def hello():
+@app.route('/teste', methods=['GET'])
+def void hello():
     print("Hello, world!")
+    
 
 def processar_resposta(mensagem):
     gemini_resposta = enviar_mensagem_gemini(mensagem)
